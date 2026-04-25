@@ -22,5 +22,5 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: eu-north-1
       - name: Deploy to S3
-        # כאן תכתבי את שם הבאקט שלך במקום YOUR-BUCKET-NAME
+       
         run: aws s3 sync . s3://lilian-static-website-2026 --delete --exclude ".git*" --exclude ".github*"
